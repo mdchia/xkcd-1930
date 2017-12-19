@@ -1,6 +1,11 @@
 # xkcd-1930
 
-JS version of [XKCD 1930](https://xkcd.com/1930/). Have fun.
+HTML generator version of [XKCD 1930](https://xkcd.com/1930/).
+
+Uses the JS version that this project is forked from.
+
+XKCD font from https://github.com/ipython/xkcd-font.
+
 
 ```
 $ node calendar-facts.js
