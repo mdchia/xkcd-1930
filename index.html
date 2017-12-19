@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
     <head>
         <title>Hello World</title>
         <style>
@@ -10,12 +10,12 @@
 
         html, body {
             height: 100%;
-            margin: 0;
-            padding: 0;
+            margin: 0em;
+            padding: 0em;
             width: 100%;
             font-family: xkcd-script;
             color: black;
-            line-height: 150%;
+            line-height: 200%;
         }
 
         body {
@@ -27,12 +27,41 @@
             display: table-cell;
             vertical-align: middle;
             font-size: 2em;
+            padding: 10%;
+        }
+        .helptext {
+          font-size: 0.5em;
+          color: #555;
+        }
+        a {
+          font-style: normal;
         }
         </style>
+        <script src="calendar-facts.js"></script>
     </head>
     <body>
+      <script type="text/javascript">
+      function refresh(){
+        document.getElementById("maintext").innerHTML=generateCalendarFact();
+      };
+        </script>
     <div class="my-block">
-       Loading ... (may need to enable javascript)
+      <span id="maintext" onclick="refresh();">
+         Loading ... (may need to enable javascript)
+       </span><br /><br />
+       <span class="helptext">
+         (click the above to refresh) <br />
+         <a href="https://github.com/mdchia/xkcd-1930">
+           more details at the project github page
+         </a><br />
+         based on
+         <a href="https://xkcd.com/1930/">
+           xkcd 1930
+         </a>
+       </span>
     </div>
+    <script type="text/javascript">
+    refresh();
+      </script>
     </body>
 </html>

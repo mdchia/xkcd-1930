@@ -1,4 +1,5 @@
-console.log(sequence(
+function generateCalendarFact(){
+return (sequence(
   "Did you know that",
   choice(
     sequence(
@@ -128,6 +129,7 @@ console.log(sequence(
   ),
   "."
 ))
+}
 
 function choice () {
   return arguments[Math.round(Math.random() * (arguments.length - 1))]
